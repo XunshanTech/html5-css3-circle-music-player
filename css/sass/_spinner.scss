@@ -6,11 +6,12 @@ $background-color: #DE620A; /* No gradients */
 /* Don't change anything below this point */
 
 .player-background {
-    width: $size;
-    height: $size;
-    background: #dddddd;
-    @include border-radius(50%);
-    position: relative;
+  width: $size;
+  height: $size;
+  @include border-radius(50%);
+  position: relative;
+  background: #000;
+  position: relative;
 }
 
 .pie {
@@ -32,13 +33,13 @@ $background-color: #DE620A; /* No gradients */
   @include border-radius(0 100% 100% 0 / 0 50% 50% 0);
   left: 50%;
   opacity: 0;
-  z-index: 100;
+  z-index: 20;
   border-left: none;
 }
 
 .mask {
-  width: 51%;
-  height: 101%;
+  width: 101px;
+  height: 202px;
   position: absolute;
   top: -1px;
   left: -1px;
@@ -46,15 +47,4 @@ $background-color: #DE620A; /* No gradients */
   opacity: 1;
   z-index: 50;
   @include border-radius(100% 0 0 100%/50% 0 0 50%);
-}
-
-
-@-webkit-keyframes rota {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@-webkit-keyframes opa {
-  0% { opacity: 1; }
-  50%, 100% { opacity: 0; }
 }
